@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Baby Weston</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background: black;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png');
+      z-index: -1;
+    }
+    h1, p {
+      margin: 0;
+    }
+    button {
+      background-color: #5C80BC;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #8AB6D6;
+    }
+    img {
+      width: 200px;
+      height: auto;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+    #content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div id="content">
+    <!-- First Page Content -->
+    <h1>Click Here!</h1>
+    <button onclick="showIntroduction()">Click Here!</button>
+  </div>
+
+  <script>
+    function showIntroduction() {
+      const content = document.getElementById('content');
+      content.innerHTML = `
+        <h1>Welcome Baby Weston!</h1>
+        <p>Born X/X/XXXX at X lbs, X inches</p>
+        <img src="./YOUR_IMAGE_NAME.jpg" alt="Baby Weston">
+        <p>Welcome to the world, little explorer!</p>
+      `;
+    }
+  </script>
+</body>
+</html>
